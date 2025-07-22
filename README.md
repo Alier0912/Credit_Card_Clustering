@@ -36,7 +36,8 @@ SELECT * FROM credit;
 ```
 
 **1. Customer Spending Behavior**
--- a) average purchase per customer
+
+a) average purchase per customer
 ```sql
 SELECT 
 customer_id,
@@ -69,6 +70,7 @@ WHERE (cash_advance + purchases) > 0
 ORDER BY 2 DESC
 LIMIT 10;
 ```
+---
 
 **2. Customer Credit Utilization**
 d) What percentage of the credit limit is being used (utilization)?
@@ -92,6 +94,7 @@ WHERE minimum_payment / NULLIF(payments, 0) IS NOT NULL
 ORDER BY 2 DESC
 LIMIT 10;
 ```
+---
 
 **3. Customer Transaction Patterns**
 f) How frequently do customers make purchases?
@@ -125,6 +128,7 @@ cash_advance
 FROM credit
 WHERE cash_advance > 0
 ```
+----
 
 **4. Derived Indicators For Clustering**
 i) average tenure spent
@@ -177,6 +181,7 @@ COUNT(*) AS customer_count
 FROM payment_reg
 GROUP BY 1
 ```
+---
 
 
 ## Key Analyses
